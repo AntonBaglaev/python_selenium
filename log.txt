@@ -1,0 +1,8 @@
+2024-12-16 15:54:31 INFO ====== WebDriver manager ======
+2024-12-16 15:54:34 INFO Get LATEST chromedriver version for google-chrome
+2024-12-16 15:54:34 INFO Get LATEST chromedriver version for google-chrome
+2024-12-16 15:54:34 INFO Driver [C:\Users\СТОМАРТ\.wdm\drivers\chromedriver\win64\131.0.6778.108\chromedriver-win32/chromedriver.exe] found in cache
+2024-12-16 15:54:37 INFO Test1 Starting
+2024-12-16 15:54:40 INFO Send test to element //*[@id='login']/div[1]/label/input
+2024-12-16 15:54:40 INFO Send test to element //*[@id='login']/div[2]/label/input
+2024-12-16 15:54:40 INFO Click login button
