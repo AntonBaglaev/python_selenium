@@ -1,8 +1,342 @@
-2024-12-16 15:54:31 INFO ====== WebDriver manager ======
-2024-12-16 15:54:34 INFO Get LATEST chromedriver version for google-chrome
-2024-12-16 15:54:34 INFO Get LATEST chromedriver version for google-chrome
-2024-12-16 15:54:34 INFO Driver [C:\Users\СТОМАРТ\.wdm\drivers\chromedriver\win64\131.0.6778.108\chromedriver-win32/chromedriver.exe] found in cache
-2024-12-16 15:54:37 INFO Test1 Starting
-2024-12-16 15:54:40 INFO Send test to element //*[@id='login']/div[1]/label/input
-2024-12-16 15:54:40 INFO Send test to element //*[@id='login']/div[2]/label/input
-2024-12-16 15:54:40 INFO Click login button
+2024-12-17 16:13:18 INFO ====== WebDriver manager ======
+2024-12-17 16:13:21 INFO Get LATEST chromedriver version for google-chrome
+2024-12-17 16:13:22 INFO Get LATEST chromedriver version for google-chrome
+2024-12-17 16:13:22 INFO Driver [C:\Users\СТОМАРТ\.wdm\drivers\chromedriver\win64\131.0.6778.108\chromedriver-win32/chromedriver.exe] found in cache
+2024-12-17 16:13:25 INFO Test1 Starting
+2024-12-17 16:13:28 INFO Send test to element login form
+2024-12-17 16:13:28 INFO Send test to element password form
+2024-12-17 16:13:29 INFO Clicked login button
+2024-12-17 16:13:32 ERROR Find element exception
+Traceback (most recent call last):
+  File "C:\WORK\java\python\pythonProject\BaseApp.py", line 15, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: Can-t find element by locator ('xpath', '//*[@id="app"]/main/div/div/div[2]/h2')
+Stacktrace:
+	GetHandleVerifier [0x005C34A3+25059]
+	(No symbol) [0x0054CEA4]
+	(No symbol) [0x0042BEC3]
+	(No symbol) [0x0046FD86]
+	(No symbol) [0x0046FFCB]
+	(No symbol) [0x004AD952]
+	(No symbol) [0x00491F44]
+	(No symbol) [0x004AB51E]
+	(No symbol) [0x00491C96]
+	(No symbol) [0x00463FAC]
+	(No symbol) [0x00464F3D]
+	GetHandleVerifier [0x008B5613+3113811]
+	GetHandleVerifier [0x008CA2DA+3199002]
+	GetHandleVerifier [0x008C2AB2+3168242]
+	GetHandleVerifier [0x00663310+680016]
+	(No symbol) [0x005557ED]
+	(No symbol) [0x00552A98]
+	(No symbol) [0x00552C35]
+	(No symbol) [0x00545890]
+	BaseThreadInitThunk [0x76A8FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x7775809E+286]
+	RtlGetAppContainerNamedObjectPath [0x7775806E+238]
+
+2024-12-17 16:13:33 INFO Test 2 Start
+2024-12-17 16:13:33 INFO Send AntonN85 to element login form
+2024-12-17 16:13:33 INFO Send ca23435e18 to element password form
+2024-12-17 16:13:34 INFO Clicked login button
+2024-12-17 16:13:37 ERROR Find element exception
+Traceback (most recent call last):
+  File "C:\WORK\java\python\pythonProject\BaseApp.py", line 15, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: Can-t find element by locator ('xpath', '//*[id="app"]/main/nav/ul/li[3]/a')
+Stacktrace:
+	GetHandleVerifier [0x005C34A3+25059]
+	(No symbol) [0x0054CEA4]
+	(No symbol) [0x0042BEC3]
+	(No symbol) [0x0046FD86]
+	(No symbol) [0x0046FFCB]
+	(No symbol) [0x004AD952]
+	(No symbol) [0x00491F44]
+	(No symbol) [0x004AB51E]
+	(No symbol) [0x00491C96]
+	(No symbol) [0x00463FAC]
+	(No symbol) [0x00464F3D]
+	GetHandleVerifier [0x008B5613+3113811]
+	GetHandleVerifier [0x008CA2DA+3199002]
+	GetHandleVerifier [0x008C2AB2+3168242]
+	GetHandleVerifier [0x00663310+680016]
+	(No symbol) [0x005557ED]
+	(No symbol) [0x00552A98]
+	(No symbol) [0x00552C35]
+	(No symbol) [0x00545890]
+	BaseThreadInitThunk [0x76A8FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x7775809E+286]
+	RtlGetAppContainerNamedObjectPath [0x7775806E+238]
+
+2024-12-17 16:13:37 INFO Test 3 Start
+2024-12-17 16:13:50 INFO Clicked new post button
+2024-12-17 16:13:50 INFO Send testtitle to element title form
+2024-12-17 16:13:50 ERROR Find element exception
+Traceback (most recent call last):
+  File "C:\WORK\java\python\pythonProject\BaseApp.py", line 15, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 770, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSelectorException: Message: invalid selector
+from javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //*[@id=\"create-item\"]/div/div/div/[1]/div/label/input because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id=\"create-item\"]/div/div/div/[1]/div/label/input' is not a valid XPath expression."}
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x005C34A3+25059]
+	(No symbol) [0x0054CEA4]
+	(No symbol) [0x0042BEC3]
+	(No symbol) [0x004319D1]
+	(No symbol) [0x004338EA]
+	(No symbol) [0x00433967]
+	(No symbol) [0x0046F999]
+	(No symbol) [0x0046FFCB]
+	(No symbol) [0x004AD952]
+	(No symbol) [0x00491F44]
+	(No symbol) [0x004AB51E]
+	(No symbol) [0x00491C96]
+	(No symbol) [0x00463FAC]
+	(No symbol) [0x00464F3D]
+	GetHandleVerifier [0x008B5613+3113811]
+	GetHandleVerifier [0x008CA2DA+3199002]
+	GetHandleVerifier [0x008C2AB2+3168242]
+	GetHandleVerifier [0x00663310+680016]
+	(No symbol) [0x005557ED]
+	(No symbol) [0x00552A98]
+	(No symbol) [0x00552C35]
+	(No symbol) [0x00545890]
+	BaseThreadInitThunk [0x76A8FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x7775809E+286]
+	RtlGetAppContainerNamedObjectPath [0x7775806E+238]
+
+2024-12-17 16:13:50 ERROR Element ('xpath', '//*[@id="create-item"]/div/div/div/[1]/div/label/input') not found
+2024-12-17 16:13:50 INFO Send testcontent to element content form
+2024-12-17 16:13:50 ERROR Find element exception
+Traceback (most recent call last):
+  File "C:\WORK\java\python\pythonProject\BaseApp.py", line 15, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 770, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSelectorException: Message: invalid selector
+from javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //*[@id=\"create-item\"]/div/div/[3]/div/label/span/textarea because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id=\"create-item\"]/div/div/[3]/div/label/span/textarea' is not a valid XPath expression."}
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x005C34A3+25059]
+	(No symbol) [0x0054CEA4]
+	(No symbol) [0x0042BEC3]
+	(No symbol) [0x004319D1]
+	(No symbol) [0x004338EA]
+	(No symbol) [0x00433967]
+	(No symbol) [0x0046F999]
+	(No symbol) [0x0046FFCB]
+	(No symbol) [0x004AD952]
+	(No symbol) [0x00491F44]
+	(No symbol) [0x004AB51E]
+	(No symbol) [0x00491C96]
+	(No symbol) [0x00463FAC]
+	(No symbol) [0x00464F3D]
+	GetHandleVerifier [0x008B5613+3113811]
+	GetHandleVerifier [0x008CA2DA+3199002]
+	GetHandleVerifier [0x008C2AB2+3168242]
+	GetHandleVerifier [0x00663310+680016]
+	(No symbol) [0x005557ED]
+	(No symbol) [0x00552A98]
+	(No symbol) [0x00552C35]
+	(No symbol) [0x00545890]
+	BaseThreadInitThunk [0x76A8FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x7775809E+286]
+	RtlGetAppContainerNamedObjectPath [0x7775806E+238]
+
+2024-12-17 16:13:50 ERROR Element ('xpath', '//*[@id="create-item"]/div/div/[3]/div/label/span/textarea') not found
+2024-12-17 16:13:50 INFO Send testdesc to element description form
+2024-12-17 16:13:50 ERROR Find element exception
+Traceback (most recent call last):
+  File "C:\WORK\java\python\pythonProject\BaseApp.py", line 15, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 770, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSelectorException: Message: invalid selector
+from javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //*[@id=\"create-item\"]/div/div/[2]/div/label/span/textarea because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id=\"create-item\"]/div/div/[2]/div/label/span/textarea' is not a valid XPath expression."}
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x005C34A3+25059]
+	(No symbol) [0x0054CEA4]
+	(No symbol) [0x0042BEC3]
+	(No symbol) [0x004319D1]
+	(No symbol) [0x004338EA]
+	(No symbol) [0x00433967]
+	(No symbol) [0x0046F999]
+	(No symbol) [0x0046FFCB]
+	(No symbol) [0x004AD952]
+	(No symbol) [0x00491F44]
+	(No symbol) [0x004AB51E]
+	(No symbol) [0x00491C96]
+	(No symbol) [0x00463FAC]
+	(No symbol) [0x00464F3D]
+	GetHandleVerifier [0x008B5613+3113811]
+	GetHandleVerifier [0x008CA2DA+3199002]
+	GetHandleVerifier [0x008C2AB2+3168242]
+	GetHandleVerifier [0x00663310+680016]
+	(No symbol) [0x005557ED]
+	(No symbol) [0x00552A98]
+	(No symbol) [0x00552C35]
+	(No symbol) [0x00545890]
+	BaseThreadInitThunk [0x76A8FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x7775809E+286]
+	RtlGetAppContainerNamedObjectPath [0x7775806E+238]
+
+2024-12-17 16:13:50 ERROR Element ('xpath', '//*[@id="create-item"]/div/div/[2]/div/label/span/textarea') not found
+2024-12-17 16:13:51 INFO Clicked save button
+2024-12-17 16:13:53 INFO We find text Create Post in field user res
+2024-12-17 16:13:53 INFO Test 4 Start
+2024-12-17 16:13:53 INFO Clicked contact button
+2024-12-17 16:13:55 INFO Send testname to element contact name form
+2024-12-17 16:13:55 INFO Send test@test.ru to element contact email form
+2024-12-17 16:14:05 ERROR Find element exception
+Traceback (most recent call last):
+  File "C:\WORK\java\python\pythonProject\BaseApp.py", line 15, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: Can-t find element by locator ('xpath', '//*[@id="contact"]/div[2]/label/input')
+Stacktrace:
+	GetHandleVerifier [0x005C34A3+25059]
+	(No symbol) [0x0054CEA4]
+	(No symbol) [0x0042BEC3]
+	(No symbol) [0x0046FD86]
+	(No symbol) [0x0046FFCB]
+	(No symbol) [0x004AD952]
+	(No symbol) [0x00491F44]
+	(No symbol) [0x004AB51E]
+	(No symbol) [0x00491C96]
+	(No symbol) [0x00463FAC]
+	(No symbol) [0x00464F3D]
+	GetHandleVerifier [0x008B5613+3113811]
+	GetHandleVerifier [0x008CA2DA+3199002]
+	GetHandleVerifier [0x008C2AB2+3168242]
+	GetHandleVerifier [0x00663310+680016]
+	(No symbol) [0x005557ED]
+	(No symbol) [0x00552A98]
+	(No symbol) [0x00552C35]
+	(No symbol) [0x00545890]
+	BaseThreadInitThunk [0x76A8FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x7775809E+286]
+	RtlGetAppContainerNamedObjectPath [0x7775806E+238]
+
+2024-12-17 16:14:05 ERROR Element ('xpath', '//*[@id="contact"]/div[2]/label/input') not found
+2024-12-17 16:14:16 ERROR Find element exception
+Traceback (most recent call last):
+  File "C:\WORK\java\python\pythonProject\BaseApp.py", line 15, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: Can-t find element by locator ('xpath', '//*[@id="contact"]/div[4]/button')
+Stacktrace:
+	GetHandleVerifier [0x005C34A3+25059]
+	(No symbol) [0x0054CEA4]
+	(No symbol) [0x0042BEC3]
+	(No symbol) [0x0046FD86]
+	(No symbol) [0x0046FFCB]
+	(No symbol) [0x004AD952]
+	(No symbol) [0x00491F44]
+	(No symbol) [0x004AB51E]
+	(No symbol) [0x00491C96]
+	(No symbol) [0x00463FAC]
+	(No symbol) [0x00464F3D]
+	GetHandleVerifier [0x008B5613+3113811]
+	GetHandleVerifier [0x008CA2DA+3199002]
+	GetHandleVerifier [0x008C2AB2+3168242]
+	GetHandleVerifier [0x00663310+680016]
+	(No symbol) [0x005557ED]
+	(No symbol) [0x00552A98]
+	(No symbol) [0x00552C35]
+	(No symbol) [0x00545890]
+	BaseThreadInitThunk [0x76A8FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x7775809E+286]
+	RtlGetAppContainerNamedObjectPath [0x7775806E+238]
+
+2024-12-17 16:14:19 INFO Get alert text
+2024-12-17 16:14:19 ERROR Exception with alert
+Traceback (most recent call last):
+  File "C:\WORK\java\python\pythonProject\BaseApp.py", line 40, in get_alert_text
+    alert = self.driver.switch_to.alert
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\remote\switch_to.py", line 58, in alert
+    _ = alert.text
+        ^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\common\alert.py", line 58, in text
+    return self.driver.execute(Command.W3C_GET_ALERT_TEXT)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "C:\WORK\java\python\pythonProject\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoAlertPresentException: Message: no such alert
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x005C34A3+25059]
+	(No symbol) [0x0054CEA4]
+	(No symbol) [0x0042BD39]
+	(No symbol) [0x0041F4D8]
+	(No symbol) [0x0043BE23]
+	(No symbol) [0x0044A0B2]
+	(No symbol) [0x00491F94]
+	(No symbol) [0x00449F11]
+	(No symbol) [0x00491C96]
+	(No symbol) [0x00463FAC]
+	(No symbol) [0x00464F3D]
+	GetHandleVerifier [0x008B5613+3113811]
+	GetHandleVerifier [0x008CA2DA+3199002]
+	GetHandleVerifier [0x008C2AB2+3168242]
+	GetHandleVerifier [0x00663310+680016]
+	(No symbol) [0x005557ED]
+	(No symbol) [0x00552A98]
+	(No symbol) [0x00552C35]
+	(No symbol) [0x00545890]
+	BaseThreadInitThunk [0x76A8FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x7775809E+286]
+	RtlGetAppContainerNamedObjectPath [0x7775806E+238]
+
+2024-12-17 16:14:19 INFO None

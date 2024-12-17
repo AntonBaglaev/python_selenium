@@ -1,32 +1,123 @@
 from BaseApp import BasePage
 from selenium.webdriver.common.by import By
 import logging
+import yaml
 
 class TestSearchLocators:
-    LOCATOR_LOGIN_FIELD = (By.XPATH, """//*[@id='login']/div[1]/label/input""")
-    LOCATOR_PASS_FIELD = (By.XPATH, """//*[@id='login']/div[2]/label/input""")
-    LOCATOR_LOGIN_BTN = (By.CSS_SELECTOR, "button")
-    LOCATOR_ERROR_FIELD = (By.XPATH, """//*[@id="app"]/main/div/div/div[2]/h2""")
+    ids = dict()
+    with open("./locators.yaml") as f:
+        locators = yaml.safe_load(f)
+    for locator in locators["xpath"].keys():
+        ids[locator] = (By.XPATH, locators["xpath"][locator])
+    for locator in locators["css"].keys():
+        ids[locator] = (By.CSS_SELECTOR, locators["css"][locator])
+
 
 class OperationsHelper(BasePage):
+
+    def enter_text_into_field(self, locator, word, description=None):
+        if description:
+            element_name = description
+        else:
+            element_name = locator
+        logging.info(f"Send {word} to element {element_name}")
+        field = self.find_element(locator)
+        if not field:
+            logging.error(f"Element {locator} not found")
+            return False
+        try:
+            field.clear()
+            field.send_keys(word)
+        except:
+            logging.exception(f"Exception while operation with {locator}")
+            return False
+        return True
+
+    def click_button(self, locator, description=None):
+        if description:
+            element_name = description
+        else:
+            element_name = locator
+        button = self.find_element(locator)
+        if not button:
+            return False
+        try:
+            button.click()
+        except:
+            logging.exception("Exception with click")
+            return False
+        logging.info(f"Clicked {element_name} button")
+        return True
+
+    def get_text_from_element(self, locator, description=None):
+        if description:
+            element_name = description
+        else:
+            element_name = locator
+        field = self.find_element(locator, time=3)
+        if not field:
+            return None
+        try:
+            text = field.text
+        except:
+            logging.exception(f"Exception while get test from {element_name}")
+            return None
+        logging.info(f"We find text {text} in field {element_name}")
+        return text
+
+# ENTER TEXT
     def enter_login(self, word):
-        logging.info(f"Send {word} to element {TestSearchLocators.LOCATOR_LOGIN_FIELD[1]}")
-        login_field = self.find_element(TestSearchLocators.LOCATOR_LOGIN_FIELD)
-        login_field.clear()
-        login_field.send_keys(word)
+       self.enter_text_into_field(TestSearchLocators.ids["LOCATOR_LOGIN_FIELD"], word, description="login form")
 
     def enter_pass(self, word):
-        logging.info(f"Send {word} to element {TestSearchLocators.LOCATOR_PASS_FIELD[1]}")
-        login_field = self.find_element(TestSearchLocators.LOCATOR_PASS_FIELD)
-        login_field.clear()
-        login_field.send_keys(word)
+        self.enter_text_into_field(TestSearchLocators.ids["LOCATOR_PASS_FIELD"], word, description="password form")
 
-    def click_login_button(self):
-        logging.info("Click login button")
-        self.find_element(TestSearchLocators.LOCATOR_LOGIN_BTN).click()
+    def enter_title(self, word):
+        self.enter_text_into_field(TestSearchLocators.ids["LOCATOR_TITLE"], word, description="title form")
 
+    def enter_description(self, word):
+        self.enter_text_into_field(TestSearchLocators.ids["LOCATOR_DESCRIPTION"], word, description="description form")
+
+    def enter_content(self, word):
+        self.enter_text_into_field(TestSearchLocators.ids["LOCATOR_CONTENT"], word, description="content form")
+
+    def enter_contact_name(self, word):
+        self.enter_text_into_field(TestSearchLocators.ids["LOCATOR_CONTACT_NAME"], word, description="contact name form")
+
+    def enter_contact_mail(self, word):
+        self.enter_text_into_field(TestSearchLocators.ids["LOCATOR_CONTACT_MAIL"], word, description="contact email form")
+
+    def enter_contact_content(self, word):
+        self.enter_text_into_field(TestSearchLocators.ids["LOCATOR_CONTACT_CONTENT"], word, description="contact content form")
+
+# GET TEXT
     def get_error_text(self):
-        error_field = self.find_element(TestSearchLocators.LOCATOR_ERROR_FIELD, time=3)
-        text = error_field.text
-        logging.info(f"We find text {text} in error field {TestSearchLocators.LOCATOR_ERROR_FIELD[1]}")
+        return self.get_text_from_element(TestSearchLocators.ids["LOCATOR_ERROR_FIELD"], description="error text")
+
+    def get_user_text(self):
+        return self.get_text_from_element(TestSearchLocators.ids["LOCATOR_HELLO"], description="user text")
+
+    def get_res_text(self):
+        return self.get_text_from_element(TestSearchLocators.ids["LOCATOR_RES_LBL"], description="user res")
+
+    def get_alert(self):
+        logging.info("Get alert text")
+        text = self.get_alert_text()
+        logging.info(text)
         return text
+
+# CLICK
+    def click_login_button(self):
+        self.click_button(TestSearchLocators.ids["LOCATOR_LOGIN_BTN"], description="login")
+
+    def click_contact_send_btn(self):
+        self.click_button(TestSearchLocators.ids["LOCATOR_CONTACT_SEND"], description="send")
+
+    def click_contact_link(self):
+        self.click_button(TestSearchLocators.ids["LOCATOR_CONTACT_BTN"], description="contact")
+
+    def click_save_btn(self):
+        self.click_button(TestSearchLocators.ids["LOCATOR_SAVE_BTN"], description="save")
+
+    def click_new_post_btn(self):
+        self.click_button(TestSearchLocators.ids["LOCATOR_NEW_POST_BTN"], description="new post")
